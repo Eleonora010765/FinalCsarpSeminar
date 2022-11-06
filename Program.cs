@@ -114,7 +114,7 @@ int[,] t55Array = CreateArrayIntTwoDim(t55Row, t55Col); //создание дв�
 double[] arithMean = ArithMeanCol(t55Array); // вычисление массива средних арифметических
 
 for (int r = 0; r < arithMean.Length; r++) Console.Write($"{Math.Round(arithMean[r], 1)}\t");
-Console.WriteLine();
+Console.WriteLine("\n\n");
 
   
 
