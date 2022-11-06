@@ -14,17 +14,34 @@ double[,] CreateArrayDoubleTwoDim(int numRow, int numCol)
     double[,] tmpArray = new double[numRow, numCol];
     Random tmpRand = new Random();
 
-    Console.WriteLine($"Массив из {numRow} строк и  {numCol} столбцов создан > ");
+    //Console.WriteLine($"Массив из {numRow} строк и  {numCol} столбцов создан > ");
 
     for (int r = 0; r < numRow; r++) {
         for (int c = 0; c < numCol; c++) {
             tmpArray[r, c] = Math.Round(tmpRand.NextDouble()*10, 1);
-            Console.Write($"{tmpArray[r, c]}\t");
+            //Console.Write($"{tmpArray[r, c]}\t");
         }
-        Console.WriteLine();
+        //Console.WriteLine();
     }
     return(tmpArray);
 }
 
+Console.Write("Урок 7 - работа с двумерным массивом\n");
+    
+Console.Write("Задайте количество строк\t> ");
+int taskRow = Convert.ToInt32(Console.ReadLine());
+    
+Console.Write("Задайте количество столбцов\t> ");
+int taskCol = Convert.ToInt32(Console.ReadLine());
 
-CreateArrayDoubleTwoDim(7, 5);
+double[,] tmpArray = CreateArrayDoubleTwoDim(taskRow, taskCol);
+
+Console.Write("Вывсти на экран? y/n > ");
+string? taskCharPrint = Console.ReadLine();
+ if (taskCharPrint[0] == 'y') {
+     for (int r = 0; r < taskRow; r++) {
+        for (int c = 0; c < taskCol; c++) Console.Write($"{tmpArray[r, c]}\t");
+        Console.WriteLine();
+    }
+ }   
+    
