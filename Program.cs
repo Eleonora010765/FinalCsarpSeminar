@@ -38,8 +38,9 @@ double[,] tmpArray = CreateArrayDoubleTwoDim(taskRow, taskCol);
 
 Console.Write("Вывсти на экран? y/n > ");
 string? taskCharPrint = Console.ReadLine();
- if (taskCharPrint[0] == 'y') {
-     for (int r = 0; r < taskRow; r++) {
+
+if (taskCharPrint[0] == 'y') {       // вывод массива на печать
+    for (int r = 0; r < taskRow; r++) {
         for (int c = 0; c < taskCol; c++) Console.Write($"{tmpArray[r, c]}\t");
         Console.WriteLine();
     }
